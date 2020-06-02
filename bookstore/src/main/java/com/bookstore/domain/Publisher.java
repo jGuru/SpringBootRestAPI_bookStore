@@ -2,11 +2,12 @@ package com.bookstore.domain;
 
 import lombok.*;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
-import java.util.Set;
 
 @Entity(name = "publishers")
 @Getter
@@ -20,7 +21,7 @@ public class Publisher {
     @Column(name = "publisher_id")
     private Integer publisherID;
     @NotNull
-    @Min(5)
+    @Min(-1)
     @Max(255)
     private String name;
 
