@@ -5,10 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.*;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
@@ -38,6 +35,10 @@ public class Book {
 
     @Max(13)
     private String isbn;
+
+    @ManyToOne()  //many-to-one mapping means that many instances of this entity are mapped to one instance of another entity –
+    @JoinColumn(name = "publisher_id")
+    private Publisher publisher;
 
 
     @ManyToMany(mappedBy = "books")

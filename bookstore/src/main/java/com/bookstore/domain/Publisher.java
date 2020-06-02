@@ -24,7 +24,7 @@ public class Publisher {
     @Max(255)
     private String name;
 
-    @OneToMany
+    /*@OneToMany
     @JoinColumn(name = "publisher_id")
-    private Set<Book> books;
+    private Set<Book> books;*/
 }
