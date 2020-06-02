@@ -1,3 +1,5 @@
+# noinspection SqlNoDataSourceInspectionForFile
+
 INSERT INTO publishers(publisher_id,name) values (1,'O''Reilly Media');
 INSERT INTO publishers(publisher_id,name) values (2,'A Book Apart');
 INSERT INTO publishers(publisher_id,name) values (3,'A K PETERS');
