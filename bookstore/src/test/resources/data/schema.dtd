@@ -1,0 +1,27 @@
+<!ELEMENT dataset (
+        authors*,
+        book_authors*,
+        books*,
+        publishers*,
+        sys_config*)>
+
+        <!ELEMENT authors EMPTY>
+        <!ATTLIST authors
+                >
+
+        <!ELEMENT book_authors EMPTY>
+        <!ATTLIST book_authors
+                >
+
+        <!ELEMENT books EMPTY>
+        <!ATTLIST books
+                >
+
+        <!ELEMENT publishers EMPTY>
+        <!ATTLIST publishers
+                >
+
+        <!ELEMENT sys_config EMPTY>
+        <!ATTLIST sys_config
+                >
+

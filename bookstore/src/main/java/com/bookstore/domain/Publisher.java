@@ -2,9 +2,7 @@ package com.bookstore.domain;
 
 import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
@@ -18,6 +16,7 @@ import javax.validation.constraints.NotNull;
 public class Publisher {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "publisher_id")
     private Integer publisherID;
     @NotNull

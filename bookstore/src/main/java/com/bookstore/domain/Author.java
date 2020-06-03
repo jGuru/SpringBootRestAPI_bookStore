@@ -16,7 +16,8 @@ import java.util.Set;
 @AllArgsConstructor
 public class Author {
 
-    @Id
+    @Id()
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "author_id")
     private Integer authorId;
 
