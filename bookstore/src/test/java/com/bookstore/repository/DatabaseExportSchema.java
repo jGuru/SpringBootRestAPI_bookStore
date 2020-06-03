@@ -25,7 +25,7 @@ public class DatabaseExportSchema {
                 "jdbc:mysql://localhost:3306/book_schema", "root", "root");
         IDatabaseConnection connection = new DatabaseConnection(jdbcConnection, "book_schema");
         connection.getConnection().setSchema("book_schema");
-        connection.getConfig().setProperty(DatabaseConfig.FEATURE_QUALIFIED_TABLE_NAMES, true);
+        //connection.getConfig().setProperty(DatabaseConfig.FEATURE_QUALIFIED_TABLE_NAMES, true);
         IDataSet dataSet = connection.createDataSet();
         System.out.println("==================\n" + connection.getSchema());
 

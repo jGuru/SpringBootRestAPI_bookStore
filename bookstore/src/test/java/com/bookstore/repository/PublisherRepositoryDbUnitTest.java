@@ -12,6 +12,7 @@ import org.springframework.test.context.support.DependencyInjectionTestExecution
 import org.springframework.test.context.support.DirtiesContextTestExecutionListener;
 import org.springframework.test.context.transaction.TransactionalTestExecutionListener;
 
+import java.util.List;
 import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -40,5 +41,22 @@ class PublisherRepositoryDbUnitTest {
         repository.delete(new Publisher(1, "O'Reilly Media"));
         Optional<Publisher> result = repository.findById(1);
         assertThat(result.isPresent()).isFalse();
+    }
+
+    @Test
+    public void testSavePublisher()
+    {
+        Publisher p=new Publisher(1,"Neeraj");
+        Publisher savedPublisher = repository.save(p);
+        assertThat(savedPublisher).isNotNull();
+        assertThat(savedPublisher.getPublisherID()).isEqualTo(1);
+    }
+
+    @Test
+    public void testGetAllPublisher()
+    {
+        List<Publisher> all = repository.findAll();
+        assertThat(all).isNotNull();
+        assertThat(all.size()>0);
     }
 }

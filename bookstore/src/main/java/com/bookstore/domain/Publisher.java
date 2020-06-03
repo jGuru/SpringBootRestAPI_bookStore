@@ -16,7 +16,6 @@ import javax.validation.constraints.NotNull;
 public class Publisher {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "publisher_id")
     private Integer publisherID;
     @NotNull

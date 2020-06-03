@@ -20,7 +20,7 @@ public class DatabaseExportSample {
         Connection jdbcConnection = DriverManager.getConnection(
                 "jdbc:mysql://localhost:3306/book_schema", "root", "root");
         IDatabaseConnection connection = new DatabaseConnection(jdbcConnection, "book_schema");
-        connection.getConfig().setProperty(DatabaseConfig.FEATURE_QUALIFIED_TABLE_NAMES, true);
+        //connection.getConfig().setProperty(DatabaseConfig.FEATURE_QUALIFIED_TABLE_NAMES, true);
         connection.getConfig().setProperty(DatabaseConfig.PROPERTY_FETCH_SIZE, 99999);
         connection.getConnection().setSchema("book_schema");
         connection.getConfig().setProperty(DatabaseConfig.PROPERTY_DATATYPE_FACTORY, new MySqlDataTypeFactory());
